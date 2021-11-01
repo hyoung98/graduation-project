@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F9F9F9"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/food"
+        android:layout_centerHorizontal="true"/>
+
+    <Button
+        android:id="@+id/search_btn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="230dp"
+        android:background="@drawable/buttonshape"
+        android:text="검색"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/step_btn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="220dp"
+        android:background="@drawable/buttonshape"
+        android:text="걸음수"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/ai_btn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/buttonshape"
+        android:text="인공지능"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/allergy_btn"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="220dp"
+        android:background="@drawable/buttonshape"
+        android:text="알레르기"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/corner_shape"
+    android:orientation="vertical">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingLeft="0dp">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="식품 이름"
+            android:textColor="#FFC107"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="1회제공량"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:paddingLeft="0dp">
+
+        <TextView
+            android:id="@+id/kcal"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="칼로리"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dan"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="단백질"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/dang"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="당류"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tan"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="탄수화물"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/gi"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="지방"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/na"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:text="나트륨"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
