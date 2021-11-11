@@ -8,10 +8,10 @@
         <TextView
             android:id="@+id/name2"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:text="식품 이름"
             android:textColor="#FFC107"
-            android:textSize="25sp"/>
+            android:textSize="23sp"/>
         <TextView
             android:id="@+id/info2"
             android:layout_width="match_parent"
@@ -21,16 +21,10 @@
         <TextView
             android:id="@+id/ge"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="150dp"
             android:text="재료"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/sung"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="영양성분"
-            android:textSize="20sp" />
 
 </LinearLayout>
 

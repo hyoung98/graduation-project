@@ -10,7 +10,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class listAdapter extends BaseAdapter {
-
+//리스트뷰를 만들기 위해서 사용되는 공간 / 이렇게 구현 해야하는 이유는 잘모름...
     private ArrayList<listview_item> items = new ArrayList<listview_item>();
 
 

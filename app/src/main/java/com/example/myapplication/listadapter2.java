@@ -5,26 +5,28 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 
 public class listadapter2 extends BaseAdapter {
+    //알레르기 리스트뷰 구현 공간
 
-    private ArrayList<listview_item2> items = new ArrayList<listview_item2>();
+    private ArrayList<listview_item2> items1 = new ArrayList<listview_item2>();
 
 
-    TextView prdlstNm;
-    TextView allergy;
-    TextView rawmtrl;
-    TextView nutrient;
+    TextView prdlstNm;//식품이름
+    TextView allergy;//알레르기
+    TextView rawmtrl;//원재료
+
 
     public listadapter2() {
     }
 
     @Override
     public int getCount() {
-        return items.size();
+        return items1.size();
     }
     @Override
     public long getItemId(int position) {
@@ -44,35 +46,30 @@ public class listadapter2 extends BaseAdapter {
         prdlstNm=(TextView) convertView.findViewById(R.id.name2);
         allergy=(TextView) convertView.findViewById(R.id.info2);
         rawmtrl=(TextView) convertView.findViewById(R.id.ge);
-        nutrient=(TextView) convertView.findViewById(R.id.sung);
 
-        listview_item2 listview_item2 = items.get(position);
+        listview_item2 listview_item2 = items1.get(position);
 
         prdlstNm.setText(listview_item2.getprdlstNm());
         allergy.setText(listview_item2.getallergy());
         rawmtrl.setText(listview_item2.getrawmtrl());
-        nutrient.setText(listview_item2.getnutrient());
-
-
         return convertView;
     }
 
     @Override
     public Object getItem(int position) {
-        return items.get(position);
+        return items1.get(position);
     }
 
 
 
-    public void addItem(String prdlstNm, String allergy, String rawmtrl, String nutrient) {
+    public void addItem(String prdlstNm, String rawmtrl, String allergy) {
         listview_item2 item = new listview_item2();
         item.setprdlstNm(prdlstNm);
-        item.setallergy(allergy);
         item.setrawmtrl(rawmtrl);
-        item.setnutrient(nutrient);
-        items.add(item);
+        item.setallergy(allergy);
+        items1.add(item);
     }
     public void delete() {
-        items.clear();
+        items1.clear();
     }
 }

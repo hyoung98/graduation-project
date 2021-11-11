@@ -5,16 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F9F9F9"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
 
-    <ImageView
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/food"
-        android:layout_centerHorizontal="true"/>
+
 
     <Button
         android:id="@+id/search_btn"
@@ -42,10 +37,10 @@
         android:id="@+id/ai_btn"
         android:layout_width="130dp"
         android:layout_height="130dp"
-        android:layout_marginTop="400dp"
         android:layout_marginLeft="50dp"
+        android:layout_marginTop="400dp"
         android:background="@drawable/buttonshape"
-        android:text="인공지능"
+        android:text="내 리스트"
         android:textColor="#000000"
         android:textSize="30sp" />
 

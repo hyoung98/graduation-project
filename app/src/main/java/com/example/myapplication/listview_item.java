@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 public class listview_item {
+    //리스트뷰를 만들기 위해서 사용되는 공간 / 왜 이렇게 구현 해야하는 이유는 잘모름...
      String DESC_KOR;
      String SERVING_WT;
      String NUTR_CONT1;

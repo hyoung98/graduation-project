@@ -1,10 +1,11 @@
 package com.example.myapplication;
 
 public class listview_item2 {
-    String prdlstNm;
-    String allergy;
-    String rawmtrl;
-    String nutrient;
+    //알레르기 리스트뷰 구현 공간
+    String prdlstNm;//식품이름
+    String allergy;//알레르기
+    String rawmtrl;//재료
+
 
 
     public void setprdlstNm(String KOR) { prdlstNm=KOR; }
@@ -14,9 +15,7 @@ public class listview_item2 {
     public void setrawmtrl(String CONT1){
         rawmtrl=CONT1;
     }
-    public void setnutrient(String CONT2){
-        nutrient=CONT2;
-    }
+
 
 
 
@@ -28,9 +27,6 @@ public class listview_item2 {
     }
     public String getrawmtrl() {
         return this.rawmtrl;
-    }
-    public String getnutrient() {
-        return this.nutrient;
     }
 
 }
