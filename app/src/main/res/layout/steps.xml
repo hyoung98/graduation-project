@@ -12,19 +12,23 @@
 
         <TextView
             android:id="@+id/textView"
+            android:layout_marginTop="30dp"
             android:layout_width="200dp"
             android:layout_height="wrap_content"
-            android:backgroundTint = "#FEC141"
-            android:textColorHint="#A9A9A9 "
-            android:textSize="27sp"
-            android:textAlignment="center"
+            android:backgroundTint="#FEC141"
+            android:fontFamily="@font/nanum2"
             android:gravity="center"
+            android:hint="식품 이름을 입력하세요."
             android:text="오늘의 걸음수:"
-            android:hint="식품 이름을 입력하세요."/>
+            android:textAlignment="center"
+            android:textColorHint="#A9A9A9 "
+            android:textSize="27sp" />
 
         <TextView
             android:id="@+id/stepCountView"
+            android:layout_marginTop="30dp"
             android:layout_width="80dp"
+            android:fontFamily="@font/nanum2"
             android:layout_marginLeft="180dp"
             android:textColor="@color/black"
             android:layout_height="wrap_content"
@@ -35,6 +39,8 @@
 
         <Button
             android:id="@+id/resetButton"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/nanum2"
             android:layout_width="100dp"
             android:layout_height="70dp"
             android:layout_marginLeft="270dp"
@@ -46,23 +52,26 @@
 
                 <TextView
                     android:id="@+id/kcal"
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="100dp"
+                    android:fontFamily="@font/nanum2"
+                    android:layout_marginTop="130dp"
                     android:gravity="center"
                     android:text="오늘 하루 소비한 칼로리!"
                     android:textAlignment="center"
                     android:textSize="30sp" />
 
-                <TextView
-                    android:id="@+id/kcal2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="190dp"
-                    android:gravity="center"
-                    android:text="0"
-                    android:textAlignment="center"
-                    android:textSize="30sp" />
+        <TextView
+            android:id="@+id/kcal2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="190dp"
+            android:fontFamily="@font/nanum2"
+            android:gravity="center"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="100sp" />
 
 
 

@@ -98,13 +98,8 @@ public class foodsearch extends AppCompatActivity {
                                                 Toast.makeText(foodsearch.this, array[position*8+2] + "클릭", Toast.LENGTH_LONG).show();
                                                // intent.putExtra("name", adapter.get(position).getSERVING_WT());//식품이름으로 데이터 보내기
                                                 intent.putExtra("name",array[position*8].toString());//식품이름
-                                                intent.putExtra("info",array[position*8+1]);//1회제공량
-                                                intent.putExtra("na",array[position*8+2]);//나트륨
-                                                intent.putExtra("kcal",array[position*8+3]);//칼로리
-                                                intent.putExtra("tan",array[position*8+4]);//탄수화물
-                                                intent.putExtra("dan",array[position*8+5]);//단백질
-                                                intent.putExtra("gi",array[position*8+6]);//지방
-                                                intent.putExtra("dang",array[position*8+7]);//당류
+                                                intent.putExtra("kcal",array[position*8+2]);//칼로리
+
 
 
                                                 startActivity(intent);

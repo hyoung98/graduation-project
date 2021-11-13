@@ -17,6 +17,7 @@
 
         <EditText
             android:id="@+id/edit"
+            android:fontFamily="@font/nanum2"
             android:layout_width="190dp"
             android:layout_height="match_parent"
             android:backgroundTint = "#FEC141"
@@ -28,6 +29,7 @@
 
         <Button
             android:id="@+id/button"
+            android:fontFamily="@font/nanum2"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:text="검색"
@@ -36,6 +38,7 @@
 
         <Button
             android:id="@+id/button1"
+            android:fontFamily="@font/nanum2"
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:backgroundTint="#9BA980"

@@ -15,6 +15,7 @@
 
         <TextView
             android:id="@+id/name"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:text="식품 이름"
@@ -22,6 +23,7 @@
             android:textSize="25sp"/>
         <TextView
             android:id="@+id/info"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="1회제공량"
@@ -39,6 +41,7 @@
 
         <TextView
             android:id="@+id/kcal"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="칼로리"
@@ -46,6 +49,7 @@
 
         <TextView
             android:id="@+id/dan"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="단백질"
@@ -53,6 +57,7 @@
 
         <TextView
             android:id="@+id/dang"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="당류"
@@ -60,6 +65,7 @@
 
         <TextView
             android:id="@+id/tan"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="탄수화물"
@@ -67,6 +73,7 @@
 
         <TextView
             android:id="@+id/gi"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="지방"
@@ -74,6 +81,7 @@
 
         <TextView
             android:id="@+id/na"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="나트륨"

@@ -7,6 +7,7 @@
 
         <TextView
             android:id="@+id/name2"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:text="식품 이름"
@@ -14,12 +15,14 @@
             android:textSize="23sp"/>
         <TextView
             android:id="@+id/info2"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:text="알레르기"
             android:textSize="20sp" />
         <TextView
             android:id="@+id/ge"
+            android:fontFamily="@font/nanum2"
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:text="재료"

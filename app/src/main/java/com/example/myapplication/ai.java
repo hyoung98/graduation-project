@@ -1,3 +1,4 @@
+
 package com.example.myapplication;
 
 import android.annotation.SuppressLint;
@@ -39,10 +40,7 @@ public class ai extends AppCompatActivity {
     SQLiteDatabase db = null;
 
     Cursor cursor;
-
-    listAdapter adapter;
-
-    //ArrayAdapter adapter, adapter2; - 쓰는 것
+    ArrayAdapter adapter;
 
 
     @SuppressLint("DefaultLocale")
@@ -50,94 +48,42 @@ public class ai extends AppCompatActivity {
     protected void onCreate(Bundle savedIntanceState) {
         super.onCreate(savedIntanceState);
         setContentView(R.layout.ai);
-        adapter = new listAdapter();
 
         listView = findViewById(R.id.listView);
-        listView2 = findViewById(R.id.listView2);
 
-        dbHelper = new DBHelper(this, 8);
-        //dbHelper = new DBHelper(this, 1);
+        dbHelper = new DBHelper(this, 3);
         db = dbHelper.getWritableDatabase();    // 읽기/쓰기 모드로 데이터베이스를 오픈
 
     }
- /*   public void listUpdate(View v) {//데이터 베이스 업데이트 구역
-        cursor = db.rawQuery("SELECT * FROM tableName", null);
-        startManagingCursor(cursor);    //엑티비티의 생명주기와 커서의 생명주기를 같게 한다.
-
-        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
-        adapter2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
-
-        while (cursor.moveToNext()) {
-            adapter.add(cursor.getString(0));
-            adapter2.add(cursor.getString(1));
-
-        }
-
-        /*
-        cursor.moveToFirst();
-        cursor.moveToPrevious();
-        cursor.moveToPosition(2);
-        */
-
-        /*listView.setAdapter(adapter);
-        listView2.setAdapter(adapter2);
-    }*/
-
-
 
     public void insert(View v) {//데이터베이스 칼로리 정보삽입구역
 
         Intent intent = getIntent();
-        //String name = editText.getText().toString();
-        //String info = editText2.getText().toString();
-
         String name = " ";
-        String info = " ";
-        String na =" ";
         String kcal =" ";
-        String tan =" ";
-        String dan =" ";
-        String gi =" ";
-        String dang =" ";
+
 
         try {
             name = intent.getStringExtra("name");
-            info = intent.getStringExtra("info");
-            na = intent.getStringExtra("na");
             kcal = intent.getStringExtra("kcal");
-            tan = intent.getStringExtra("tan");
-            dan = intent.getStringExtra("dan");
-            gi = intent.getStringExtra("gi");
-            dang = intent.getStringExtra("dang");
 
-            //Toast.makeText(ai.this, name1 + "클릭", Toast.LENGTH_LONG).show();
-            //String value2 = (String)intent.getStringExtra("info");
-            //  db.execSQL("INSERT INTO tableName VALUES ('" + name1 + "', '" + info1 + "');");
-            db.execSQL("INSERT INTO tableName VALUES ('" + name + "', '" + info + "', '"+ na + "', '" + kcal + "', '" + tan + "', '"+ dan + "', '"+ gi + "', '" + dang + "');");
-
-
-
+            db.execSQL("INSERT INTO tableName VALUES ('" + name + "', '" + kcal + "');");
         }catch (NullPointerException e) {
             Toast.makeText(ai.this, "오류남", Toast.LENGTH_LONG).show();
         }
 
         Toast.makeText(getApplicationContext(), "추가 성공", Toast.LENGTH_SHORT).show();
 
-        //editText.setText("");
-        //editText2.setText("");
-
         cursor = db.rawQuery("SELECT * FROM tableName", null);
         startManagingCursor(cursor);    //엑티비티의 생명주기와 커서의 생명주기를 같게 한다.
 
-        //adapter= new ArrayAdapter(this,android.R.layout.simple_list_item_1,items);
-       // adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
-       // adapter2 = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
+        adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1);
 
         while (cursor.moveToNext()) {
-            adapter.addItem(name, info,na,kcal,tan,dan,gi,dang);
-         //  adapter.add(cursor.getString(0));
-        //    adapter2.add(cursor.getString(1));
-
+            String name1 = cursor.getString(0);
+            String kcal1 = cursor.getString(1);
+            String result = name1 + "\n" + kcal1;
+            adapter.add(result);
         }
 
         /*
@@ -147,31 +93,14 @@ public class ai extends AppCompatActivity {
         */
 
         listView.setAdapter(adapter);
-      //  listView2.setAdapter(adapter2);
     }
 
     public void delete(View v) {//데이터베이스 칼로리 정보 삭제구역
-        //String name = editText.getText().toString();
-        // db.execSQL("DELETE FROM tableName WHERE name = '" + name + "';");
-        //adapter.delete();
-        //adapter.notifyDataSetChanged(); //갱신
-        // items.clear();
-        // items1.clear();
 
         Intent intent = getIntent();
-        //String name = editText.getText().toString();
-        //String info = editText2.getText().toString();
-        String name1 = " ";
-        String info1 = " ";
-        try {
-            name1 = intent.getStringExtra("name");
-            info1 = intent.getStringExtra("info");
-            db.execSQL("DELETE FROM tableName WHERE name = '" + name1 + "';");
-            //db.execSQL("DELETE FROM tableName WHERE info = '" + info1+ "';");
 
-        }catch (NullPointerException e) {
-            Toast.makeText(ai.this, "오류남", Toast.LENGTH_LONG).show();
-        }
+        db = dbHelper.getWritableDatabase();    // 읽기/쓰기 모드로 데이터베이스를 오픈
+
 
 
     }
