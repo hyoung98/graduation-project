@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import static android.text.TextUtils.substring;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,6 +44,7 @@ public class foodsearch extends AppCompatActivity {
     listAdapter adapter;
    // ArrayList<String> items= new ArrayList<String>();
 
+    private long backBtnTime = 0;
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -74,12 +77,22 @@ public class foodsearch extends AppCompatActivity {
 
                                 data[0] =getXmlData();//stringbuffer에 파싱해서 들어온 데이터 data 문자열에 넣기
 
-
                                 runOnUiThread(new Runnable() {
                                     @Override
                                     public void run() {
+                                        int idx = data[0].indexOf(":");
+                                        int idx2 = data[0].indexOf("//");
                                         String[] array = data[0].split("//");// "//"단위로 끊어서 array에 넣기
-
+                                        data[0] = data[0].replace(":","");
+                                        data[0] = data[0].replace("탄수화물","");
+                                        data[0] = data[0].replace("나트륨","");
+                                        data[0] = data[0].replace("지방","");
+                                        data[0] = data[0].replace("단백질","");
+                                        data[0] = data[0].replace("당류","");
+                                        data[0] = data[0].replace("1회제공량","");
+                                        data[0] = data[0].replace("칼로리","");
+                                        data[0] = data[0].replace(" ","");
+                                        String[] array2 = data[0].split("//");
 
                                         for(int i=0;i<array.length/8;i++) {//데이터들 출력하기
                                            //items.add(Arrays.toString(new String[]{array[i]}));
@@ -95,15 +108,20 @@ public class foodsearch extends AppCompatActivity {
                                             @Override
                                             public void onItemClick(AdapterView parent, View v, int position, long id) {
                                                 Intent intent = new Intent(getApplicationContext(), ai.class);
-                                                Toast.makeText(foodsearch.this, array[position*8+2] + "클릭", Toast.LENGTH_LONG).show();
-                                               // intent.putExtra("name", adapter.get(position).getSERVING_WT());//식품이름으로 데이터 보내기
+                                                Intent intent2 = new Intent(getApplicationContext(), nutrient.class);
+                                                //Toast.makeText(foodsearch.this, array[position*8+2] + "클릭", Toast.LENGTH_LONG).show();
                                                 intent.putExtra("name",array[position*8].toString());//식품이름
                                                 intent.putExtra("kcal",array[position*8+2]);//칼로리
                                                 startActivity(intent);
+                                                //(position*8+3)*2
+                                                intent2.putExtra("tan",array2[position*8+3]);//탄수화물
+                                                intent2.putExtra("dan",array2[position*8+4]);//단백질
+                                                intent2.putExtra("gi",array2[position*8+5]);//지방
+                                                intent2.putExtra("dang",array2[position*8+6]);//당류
+                                                intent2.putExtra("na",array2[position*8+7]);//나트륨
+                                                startActivity(intent2);
                                             }
                                         });
-
-
                                     }
                                 });
                             }
@@ -114,51 +132,22 @@ public class foodsearch extends AppCompatActivity {
             }
         });
 
-       /* LinearLayout cmdArea = (LinearLayout)convertView.findViewById(R.id.cmdarea);
-        cmdArea.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(v.getContext(), listview_item.get(pos).getContent(), Toast.LENGTH_SHORT.show());
-            }
-        });*/
+    }
+    /*앱 종료*/
+    @Override
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
 
-
-
-
-
+        if(0 <= gapTime && 2000 >= gapTime) {
+            super.onBackPressed();
+        }
+        else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
+        }
     }
 
-
-
-
-   /*public void mOnClick(View v){
-       //Intent intent = new Intent(getApplicationContext(), ai.class);
-       Intent intent = getIntent();
-       final String[] data = new String[1];
-
-       TextView text= (TextView)findViewById(R.id.result);
-       switch (v.getId()){
-           case R.id.button:
-               new Thread(new Runnable() {
-                   @Override
-                   public void run() {
-                       data[0] =getXmlData();
-
-
-                       runOnUiThread(new Runnable() {
-                           @Override
-                           public void run() {
-                               text.setText(data[0]);//text에 정보가 들어가 있음 -> 리스트로 옮겨보기
-
-                               // adapter.addItem(DESC_KOR,SERVING_WT,NUTR_CONT1,NUTR_CONT2,NUTR_CONT3,NUTR_CONT4,NUTR_CONT5,NUTR_CONT6);
-                               //adapter.notifyDataSetChanged();
-                           }
-                       });
-                   }
-               }).start();
-               break;
-       }
-    }*/
 
     public void btnStart(View v) {//리스트뷰 초기화 부분 다시 검색하고 싶은 경우 초기화 버튼을 눌러주고 검색을 해야 리스트뷰가 겹치지 않게 나온다.
         adapter.delete();

@@ -8,6 +8,7 @@ import android.hardware.SensorEventListener;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -20,10 +21,11 @@ public class MainActivity extends AppCompatActivity {
 
 
         //search_btn step_btn ai_btn allergy_btn
-        Button search_btn = (Button) findViewById(R.id.search_btn);
-        Button step_btn = (Button) findViewById(R.id.step_btn);
-        Button ai_btn = (Button) findViewById(R.id.ai_btn);
-        Button allergy_btn = (Button) findViewById(R.id.allergy_btn);
+        ImageButton search_btn = (ImageButton) findViewById(R.id.search_btn);
+        ImageButton step_btn = (ImageButton) findViewById(R.id.step_btn);
+        ImageButton ai_btn = (ImageButton) findViewById(R.id.ai_btn);
+        ImageButton allergy_btn = (ImageButton) findViewById(R.id.allergy_btn);
+        ImageButton nutrient_btn = (ImageButton) findViewById(R.id.nutrient_btn);
 
         //검색 버튼 누르면 검색창으로 이동
         search_btn.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), foodsearch.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -40,7 +41,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), steps.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -49,7 +49,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), ai.class);
                 startActivity(intent);
-                finish();
             }
         });
 
@@ -59,12 +58,21 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext(), allergy.class);
 
                 startActivity(intent);
-                finish();
+            }
+        });
+
+        nutrient_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), nutrient.class);
+
+                startActivity(intent);
             }
         });
 
     }
 
+    /*앱 종료*/
     @Override
     public void onBackPressed() {
         long curTime = System.currentTimeMillis();
@@ -77,9 +85,5 @@ public class MainActivity extends AppCompatActivity {
             backBtnTime = curTime;
             Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
         }
-
     }
-
-
-
 }

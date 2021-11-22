@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -28,6 +29,7 @@ public class steps extends AppCompatActivity implements SensorEventListener{
     private float lastZ;
     private float x, y, z;
 
+    private long backBtnTime = 0;
 
     int kcal22=0;
 
@@ -119,6 +121,21 @@ public class steps extends AppCompatActivity implements SensorEventListener{
                 cnt = 0;
                 stepCountView.setText("" + cnt);
                 break;
+        }
+    }
+
+    /*앱 종료*/
+    @Override
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime) {
+            super.onBackPressed();
+        }
+        else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
         }
     }
 }

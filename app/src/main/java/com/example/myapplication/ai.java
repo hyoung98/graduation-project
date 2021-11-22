@@ -48,7 +48,7 @@ public class ai extends AppCompatActivity {
 
     Cursor cursor;
     ArrayAdapter adapter;
-
+    private long backBtnTime = 0;
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -101,7 +101,7 @@ public class ai extends AppCompatActivity {
     }
 
     public void delete(View v) {//데이터베이스 칼로리 정보 삭제구역
-            String sqlDelete = "DELETE FROM tableName" ;
+            String sqlDelete = "DELETE FROM tableName";
             db.execSQL(sqlDelete);
             adapter.clear();
             adapter.notifyDataSetChanged();
@@ -109,4 +109,18 @@ public class ai extends AppCompatActivity {
 
     }
 
+    /*앱 종료*/
+    @Override
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime) {
+            super.onBackPressed();
+        }
+        else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
+        }
+    }
 }

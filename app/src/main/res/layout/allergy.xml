@@ -33,15 +33,15 @@
             android:layout_width="100dp"
             android:layout_height="match_parent"
             android:text="검색"
-            android:textSize="20sp"
-            android:backgroundTint="#9BA980" />
+            android:background="@drawable/color_gray"
+            android:textSize="20sp" />
 
         <Button
             android:id="@+id/button1"
             android:fontFamily="@font/nanum2"
             android:layout_width="100dp"
             android:layout_height="match_parent"
-            android:backgroundTint="#9BA980"
+            android:background="@drawable/color_gray"
             android:onClick="btnStart2"
             android:text="초기화"
             android:textSize="20sp" />

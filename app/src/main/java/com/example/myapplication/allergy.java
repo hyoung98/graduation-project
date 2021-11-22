@@ -29,8 +29,9 @@ import java.net.URLEncoder;
 
 public class allergy extends AppCompatActivity {
 
-    ListView listView;
-    listadapter2 adapter;
+    ListView listView; //리스트뷰
+    listadapter2 adapter; //어댑터
+    private long backBtnTime = 0; //뒤로가기 변수
 
     @SuppressLint("DefaultLocale")
     @Override
@@ -159,5 +160,20 @@ public class allergy extends AppCompatActivity {
             e.printStackTrace();
         }
         return buffer.toString();//StringBuffer 문자열 객체 반환
+    }
+
+    /*앱 종료*/
+    @Override
+    public void onBackPressed() {
+        long curTime = System.currentTimeMillis();
+        long gapTime = curTime - backBtnTime;
+
+        if(0 <= gapTime && 2000 >= gapTime) {
+            super.onBackPressed();
+        }
+        else {
+            backBtnTime = curTime;
+            Toast.makeText(this, "한번 더 누르면 종료됩니다.",Toast.LENGTH_SHORT).show();
+        }
     }
 }

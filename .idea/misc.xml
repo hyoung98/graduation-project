@@ -4,6 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/food project/app/src/main/res/drawable/buttonshape.xml" value="0.17314814814814813" />
+        <entry key="..\:/food project/app/src/main/res/drawable/color_blue.xml" value="0.1" />
+        <entry key="..\:/food project/app/src/main/res/drawable/color_gray.xml" value="0.1" />
+        <entry key="..\:/food project/app/src/main/res/drawable/color_mint.xml" value="0.1" />
+        <entry key="..\:/food project/app/src/main/res/drawable/color_pink.xml" value="0.1" />
+        <entry key="..\:/food project/app/src/main/res/drawable/color_red.xml" value="0.1" />
+        <entry key="..\:/food project/app/src/main/res/drawable/color_yellow.xml" value="0.1" />
         <entry key="..\:/food project/app/src/main/res/drawable/corner_shape.xml" value="0.15208333333333332" />
         <entry key="..\:/food project/app/src/main/res/layout/activity_main.xml" value="0.2390625" />
         <entry key="..\:/food project/app/src/main/res/layout/ai.xml" value="0.264" />
@@ -12,7 +18,8 @@
         <entry key="..\:/food project/app/src/main/res/layout/foodsearch.xml" value="0.2223731884057971" />
         <entry key="..\:/food project/app/src/main/res/layout/list.xml" value="0.25364583333333335" />
         <entry key="..\:/food project/app/src/main/res/layout/list_item.xml" value="0.264" />
-        <entry key="..\:/food project/app/src/main/res/layout/list_item2.xml" value="0.1359375" />
+        <entry key="..\:/food project/app/src/main/res/layout/list_item2.xml" value="0.264" />
+        <entry key="..\:/food project/app/src/main/res/layout/nutrient.xml" value="0.264" />
         <entry key="..\:/food project/app/src/main/res/layout/steps.xml" value="0.2223731884057971" />
       </map>
     </option>
