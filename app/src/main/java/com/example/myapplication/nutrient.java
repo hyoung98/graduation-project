@@ -136,10 +136,10 @@ public class nutrient extends AppCompatActivity {
             try{
                 sum_dang = Double.parseDouble(dang);
                // sum_dang += da;
-                Toast.makeText(nutrient.this, Integer.toString((int) sum_dang), Toast.LENGTH_LONG).show();
+                //Toast.makeText(nutrient.this, Integer.toString((int) sum_dang), Toast.LENGTH_LONG).show();
             }catch(NumberFormatException e){
                 sum_dang = 0;
-                Toast.makeText(nutrient.this, Integer.toString((int) sum_dang), Toast.LENGTH_LONG).show();
+                //Toast.makeText(nutrient.this, Integer.toString((int) sum_dang), Toast.LENGTH_LONG).show();
 
             }catch(Exception e){
                 e.printStackTrace();

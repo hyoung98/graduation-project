@@ -80,7 +80,7 @@ public class ai extends AppCompatActivity {
             databaseReference.child(name).setValue(kcal); //파이어베이스 저장
 
         }catch (NullPointerException e) {
-            Toast.makeText(ai.this, "오류남", Toast.LENGTH_LONG).show();
+            Toast.makeText(ai.this, "오류", Toast.LENGTH_LONG).show();
         }
 
         Toast.makeText(getApplicationContext(), "추가 성공", Toast.LENGTH_SHORT).show();

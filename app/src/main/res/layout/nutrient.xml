@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/white"
     android:orientation="vertical">
 
     <LinearLayout
@@ -19,9 +20,9 @@
             android:layout_gravity="left"
             android:layout_marginLeft="20dp"
             android:background="@drawable/color_gray"
+            android:fontFamily="@font/nanum2"
             android:text="'?'"
             android:textColor="#000000"
-            android:fontFamily="@font/nanum2"
             android:textSize="30sp" />
 
         <Button
@@ -30,10 +31,10 @@
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:background="@drawable/color_gray"
+            android:fontFamily="@font/nanum2"
             android:onClick="delete2"
             android:text="delete"
             android:textColor="#000000"
-            android:fontFamily="@font/nanum2"
             android:textSize="30sp" />
 
         <Button
@@ -42,10 +43,10 @@
             android:layout_height="50dp"
             android:layout_marginLeft="10dp"
             android:background="@drawable/color_gray"
+            android:fontFamily="@font/nanum2"
             android:onClick="insert2"
             android:text="insert"
             android:textColor="#000000"
-            android:fontFamily="@font/nanum2"
             android:textSize="30sp" />
     </LinearLayout>
 
