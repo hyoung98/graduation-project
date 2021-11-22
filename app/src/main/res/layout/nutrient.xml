@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="105dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/color_gray"
+            android:text="'?'"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanum2"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/delete"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:background="@drawable/color_gray"
+            android:onClick="delete2"
+            android:text="delete"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanum2"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/insert"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/color_gray"
+            android:onClick="insert2"
+            android:text="insert"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanum2"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="*권장량 대비 섭취비율*"
+        android:textAlignment="center"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="영양소"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="27sp" />
+
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="*권장량"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="*권고량"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="●탄 328g"
+        android:textAlignment="center"
+        android:textColor="#86D5AD"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="●단 60g"
+        android:textAlignment="center"
+        android:textColor="#469BDD"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="300dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="●지 50g"
+        android:textAlignment="center"
+        android:textColor="#F5DF4D"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="210dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="●나 2000mg"
+        android:textAlignment="center"
+        android:textColor="#CF5C79"
+        android:textSize="13sp" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="45dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="●당 50g"
+        android:textAlignment="center"
+        android:textColor="#D0D5564D"
+        android:textSize="13sp" />
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/color_mint" />
+
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="345dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="탄수화물"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/calctan"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="260dp"
+        android:fontFamily="@font/nanum2"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="220dp"
+        android:background="@drawable/color_blue" />
+
+    <TextView
+        android:id="@+id/calcdan"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="260dp"
+        android:fontFamily="@font/nanum2"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+
+    <TextView
+        android:id="@+id/calcdan1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="345dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="단백질"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/color_yellow" />
+
+    <TextView
+        android:id="@+id/calcgi"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="430dp"
+        android:fontFamily="@font/nanum2"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+    <TextView
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="520dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="지방"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/btn4"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="390dp"
+        android:background="@drawable/color_pink"
+        android:text="나"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/calcdang"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="245dp"
+        android:layout_marginTop="430dp"
+        android:fontFamily="@font/nanum2"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/calcdang1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="515dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="나트륨"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+    <ImageView
+        android:id="@+id/btn5"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="540dp"
+        android:background="@drawable/color_red"
+        android:text="당"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/calcna"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginTop="580dp"
+        android:fontFamily="@font/nanum2"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/calcna1"
+        android:layout_width="130dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="670dp"
+        android:fontFamily="@font/nanum2"
+        android:gravity="center"
+        android:text="당류"
+        android:textColor="#000000"
+        android:textSize="20sp" />
+
+
+
+</RelativeLayout>
+
+
+
+
